@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Admin Dashboard</title>
+    <!-- base:css -->
+    <link rel="stylesheet" href="assests/vendors/mdi/css/materialdesignicons.min.css" />
+    <link rel="stylesheet" href="assests/css/style.css" />
+    <!-- endinject -->
+    <link rel="shortcut icon" href="assests/images/favicon.png" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
+    <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <style>
+        .card-header {
+            background: #223e9c;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-scroller d-flex">
+        <!-- partial:./partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+            <ul class="nav">
+                <li class="nav-item sidebar-category">
+                    <p>Navigation</p>
+                    <span></span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <i class="mdi mdi-view-quilt menu-icon"></i>
+                        <span class="menu-title">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="contact.html">
+                        <i class="mdi mdi-account-multiple-plus menu-icon"></i>
+                        <span class="menu-title">Employee Form</span>
+                    </a>
+                </li>
+
+                <li class="nav-item ">
+                    <a class="nav-link" href="binaryTree.html">
+                        <i class="mdi mdi-tree menu-icon"></i>
+                        <span class="menu-title">Binary Tree</span>
+                    </a>
+                </li>
+                <li
+                class="nav-item ">
+                <a class="nav-link" href="TempratureConversion.html">
+                  <i class="mdi mdi-calendar menu-icon"></i>
+                  <span class="menu-title">Temprature Conversion</span>
+                </a>
+              </li>
+              <li
+            class="nav-item ">
+            <a class="nav-link" href="dataTables.html">
+              <i class="mdi mdi-table-edit menu-icon"></i>
+              <span class="menu-title">DataTables</span>
+            </a>
+          </li>
+            </ul>
+        </nav>
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body p-5 ">
+                                    <h2>Binary Tree Input</h2>
+
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="form-group">
+                                                <label for="nodeValue">Enter Value</label>
+                                                <input type="text" id="nodeValue" name="nodeValue" class="form-control"
+                                                    placeholder="Enter Value" value="">
+                                            </div>
+
+                                        </div>
+                                        <div class="col-6 mt-4">
+                                            <button onclick="addNode()" class="btn btn-primary">Add Node</button>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div id="tree-container">
+                                        <!-- Tree structure will be dynamically generated here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- content-wrapper ends -->
+                <!-- partial:./partials/_footer.html -->
+                <footer class="footer">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                                <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright
+                                    © bootstrapdash.com 2020</span>
+                                <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Distributed
+                                    By:
+                                    <a href="https://www.themewagon.com/" target="_blank">ThemeWagon</a></span>
+                                <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">
+                                    Free
+                                    <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap dashboard
+                                        templates</a>
+                                    from Bootstrapdash.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+
+                <!-- partial -->
+            </div>
+            <!-- main-panel ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+
+        // Binary tree data structure
+        var binaryTree = null;
+
+        // Function to recursively build the binary tree structure
+        function buildBinaryTree(container, node) {
+            if (node === null) {
+                return;
+            }
+
+            var ul = $('<ul style="">');
+            ul.appendTo(container);
+
+            var li = $('<li>').text(node.value);
+            li.appendTo(ul);
+
+            buildBinaryTree(ul, node.left);
+            buildBinaryTree(ul, node.right);
+        }
+
+        // Function to add a new node to the binary tree
+        function addNode() {
+            var inputValue = $('#nodeValue').val();
+
+            if (inputValue.trim() === '') {
+                alert('Please enter a value for the node.');
+                return;
+            }
+
+            // Create a new node with the entered value
+            var newNode = {
+                value: inputValue,
+                left: null,
+                right: null
+            };
+
+            // If the tree is empty, set the new node as the root
+            if (binaryTree === null) {
+                binaryTree = newNode;
+            } else {
+                // Otherwise, find the appropriate position to add the new node
+                addNodeToTree(binaryTree, newNode);
+            }
+
+            // Clear the input box
+            $('#nodeValue').val('');
+
+            // Refresh the tree view
+            $('#tree-container').empty();
+            buildBinaryTree($('#tree-container'), binaryTree);
+        }
+
+        // Function to recursively add a new node to the binary tree
+        function addNodeToTree(currentNode, newNode) {
+            console.log(currentNode, newNode)
+            if (newNode.value < currentNode.value) {
+                if (currentNode.left === null) {
+                    currentNode.left = newNode;
+                } else {
+                    addNodeToTree(currentNode.left, newNode);
+                }
+            } else {
+                if (currentNode.right === null) {
+                    currentNode.right = newNode;
+                } else {
+                    addNodeToTree(currentNode.right, newNode);
+                }
+            }
+        }
+
+        // Initial binary tree rendering
+        buildBinaryTree($('#tree-container'), binaryTree);        
+    </script>
+</body>
+
+</html>
